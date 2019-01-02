@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{E041B65B-6149-4CE0-A672-17D1C7677EDE}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rellow</RootNamespace>
+    <AssemblyName>Rellow</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FbonizziMonoGame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FbonizziMonoGame.1.0.8-alpha\lib\portable-net45+win8+wpa81\FbonizziMonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.Portable.3.7.1.189\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AssetsLoader.cs" />
+    <Compile Include="Assets\GameStringsLoader.cs" />
+    <Compile Include="Definitions.cs" />
+    <Compile Include="GameButtonsManager.cs" />
+    <Compile Include="GameOrchestrator.cs" />
+    <Compile Include="RellowGame.cs" />
+    <Compile Include="Pages\MainMenuPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RellowBootstrap.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="UI\ColorWithName.cs" />
+    <Compile Include="UI\FloatingText.cs" />
+    <Compile Include="UI\FloatingTextButton.cs" />
+    <Compile Include="UI\GameButton.cs" />
+    <Compile Include="UI\OverlayPopup.cs" />
+    <Compile Include="UI\ProgressBar.cs" />
+    <Compile Include="UI\UIColors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Assets\ContentBuilder\ContentBuilder.mgcb" />
+    <None Include="Assets\ContentBuilder\font-title.spritefont" />
+    <None Include="Assets\ContentBuilder\font-writing.spritefont" />
+    <None Include="Assets\_Other\Icon512x512.psd" />
+    <None Include="Assets\_Other\Music.flp" />
+    <None Include="Assets\_Other\Screenshots\FeatureGraphics.psd" />
+    <None Include="Assets\_Other\Screenshots\PromoGraphics.psd" />
+    <None Include="Assets\_TextureProject\Game.tps" />
+    <None Include="Assets\_TextureProject\Splashscreen.psd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ContentBuilder\effect-ok.wav" />
+    <Content Include="Assets\ContentBuilder\effect-wrong.wav" />
+    <Content Include="Assets\ContentBuilder\music-menu.wav" />
+    <Content Include="Assets\ContentBuilder\music-play.wav" />
+    <Content Include="Assets\ContentBuilder\Splashscreen.png" />
+    <Content Include="Assets\ContentBuilder\Spritesheet.png" />
+    <Content Include="Assets\ContentBuilder\Spritesheet.txt" />
+    <Content Include="Assets\_Other\Icon512x512.png" />
+    <Content Include="Assets\_Other\Icon72x72.png" />
+    <Content Include="Assets\_Other\Music-Menu.wav" />
+    <Content Include="Assets\_Other\Music-Play.wav" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945160.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945171.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945191.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945588.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945598.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945601.png" />
+    <Content Include="Assets\_Other\Screenshots\En\Screenshot_1526945651.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946491.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946494.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946496.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946500.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946506.png" />
+    <Content Include="Assets\_Other\Screenshots\It\Screenshot_1526946512.png" />
+    <Content Include="Assets\_TextureProject\Export\manina.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
