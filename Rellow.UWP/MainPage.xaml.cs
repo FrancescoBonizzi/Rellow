@@ -34,7 +34,7 @@ namespace Rellow.UWP
                 gameCulture: CultureInfo.CurrentCulture,
                 isPc: true,
                 isFullScreen: false,
-                rateMeUri: new Uri("https://www.fbonizzi.it"),
+                rateMeUri: new Uri("https://www.microsoft.com/store/apps/9N5JJ68QFBPB"),
                 deviceWidth: _width, deviceHeight: _height),
             window: Window.Current.CoreWindow,
             launchParameters: launchArguments,
