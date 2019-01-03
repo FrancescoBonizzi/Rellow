@@ -6,11 +6,11 @@ Rellow is a concentration game in which you have to choose the right colored but
 
 As you win, the difficulty will increase: you will have more colors to choose from and less time to decide!
 
-<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/1.png" width="150">
-<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/2.png" width="150">
-<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/5.png" width="150">
-<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/7.png" width="150">
-
+<img style="float: left; margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/1.png" width="150">
+<img style="float: left; margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/2.png" width="150">
+<img style="float: left; margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/5.png" width="150">
+<img style="float: left; margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/7.png" width="150">
+<div style="clear: both; margin-bottom: 4px;" />
 
 ---
 
