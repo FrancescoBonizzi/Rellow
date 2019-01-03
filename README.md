@@ -6,10 +6,10 @@ Rellow is a concentration game in which you have to choose the right colored but
 
 As you win, the difficulty will increase: you will have more colors to choose from and less time to decide!
 
-<img src="Rellow/Assets/_Other/Screenshots/en/1.png" width="150">
-<img src="Rellow/Assets/_Other/Screenshots/en/2.png" width="150">
-<img src="Rellow/Assets/_Other/Screenshots/en/5.png" width="150">
-<img src="Rellow/Assets/_Other/Screenshots/en/7.png" width="150">
+<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/1.png" width="150">
+<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/2.png" width="150">
+<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/5.png" width="150">
+<img src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/7.png" width="150">
 
 
 ---
