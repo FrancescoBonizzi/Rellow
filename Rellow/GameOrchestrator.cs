@@ -38,7 +38,7 @@ namespace Rellow
         public bool IsPaused { get; private set; } = false;
 
         private readonly TimeSpan _fadeDuration = TimeSpan.FromMilliseconds(800);
-        private readonly Uri _aboutUri = new Uri("http://www.fbonizzi.it");
+        private readonly Uri _aboutUri = new Uri("https://www.fbonizzi.it");
 
         public GameOrchestrator(
              Func<RellowGame> gameFactory,
