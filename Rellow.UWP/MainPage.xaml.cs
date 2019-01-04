@@ -30,7 +30,7 @@ namespace Rellow.UWP
             gameConstructor: () => new RellowBootstrap(
                 textFileAssetsLoader: new UWPTextFileImporter(),
                 settingsRepository: new UWPSettingsRepository(),
-                webPageOpener: new UWPWebPageOpener(),
+                webPageOpener: new UWPWebPageOpener(Window.Current),
                 gameCulture: CultureInfo.CurrentCulture,
                 isPc: true,
                 isFullScreen: false,
