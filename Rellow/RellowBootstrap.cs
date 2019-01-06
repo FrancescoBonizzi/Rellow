@@ -106,7 +106,6 @@ namespace Rellow
                   GraphicsDeviceManager.GraphicsDevice,
                   1080, 1920,
                   !GraphicsDeviceManager.IsFullScreen);
-            IsMouseVisible = false;
             base.Initialize();
         }
 
