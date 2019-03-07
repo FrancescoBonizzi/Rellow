@@ -70,6 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Assets\ContentBuilder\bin\effect-ok.xnb" />
+    <None Include="Assets\ContentBuilder\bin\effect-wrong.xnb" />
+    <None Include="Assets\ContentBuilder\bin\font-title.xnb" />
+    <None Include="Assets\ContentBuilder\bin\font-writing.xnb" />
+    <None Include="Assets\ContentBuilder\bin\music-menu.xnb" />
+    <None Include="Assets\ContentBuilder\bin\music-play.xnb" />
+    <None Include="Assets\ContentBuilder\bin\Splashscreen.xnb" />
+    <None Include="Assets\ContentBuilder\bin\Spritesheet.xnb" />
     <None Include="Assets\ContentBuilder\ContentBuilder.mgcb" />
     <None Include="Assets\ContentBuilder\font-title.spritefont" />
     <None Include="Assets\ContentBuilder\font-writing.spritefont" />
