@@ -109,7 +109,7 @@
       <Version>1.0.2-alpha</Version>
     </PackageReference>
     <PackageReference Include="MonoGame.Framework.Android">
-      <Version>3.7.1.189</Version>
+      <Version>3.7.0.1708</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
