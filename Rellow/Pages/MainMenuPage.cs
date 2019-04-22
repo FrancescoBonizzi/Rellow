@@ -29,28 +29,21 @@ namespace Rellow.Pages
         private readonly FloatingTextButton _playButton;
         private readonly FloatingTextButton _aboutButton;
 
-        private readonly SoundManager _soundManager;
-
-        private readonly IScreenTransformationMatrixProvider _matrixScaleProvider;
-
         public MainMenuPage(
             AssetsLoader assetsLoader,
-            SoundManager soundManager,
             GameOrchestrator gameOrchestrator,
             IScreenTransformationMatrixProvider matrixScaleProvider,
             ILocalizedStringsRepository localizedStringsRepository,
             RateMeDialog rateMeDialog,
             ISettingsRepository settingsRepository)
         {
-            _soundManager = soundManager;
-            _matrixScaleProvider = matrixScaleProvider;
             _backgroundRectangle = new Rectangle(0, 0, matrixScaleProvider.VirtualWidth, matrixScaleProvider.VirtualHeight);
 
             var titleFont = assetsLoader.TitleFont;
             _writingFont = assetsLoader.WritingFont;
             _rateMeDialog = rateMeDialog ?? throw new ArgumentNullException(nameof(rateMeDialog));
 
-            var titleText = "RELLOW";
+            const string titleText = "RELLOW";
             _title = new FloatingText(
                 titleText,
                 new DrawingInfos()
@@ -125,7 +118,7 @@ namespace Rellow.Pages
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(transformMatrix: _matrixScaleProvider.ScaleMatrix);
+            spriteBatch.Begin();
             spriteBatch.DrawRectangle(_backgroundRectangle, _backgroundColor);
             _title.Draw(spriteBatch);
             _playButton.Draw(spriteBatch);

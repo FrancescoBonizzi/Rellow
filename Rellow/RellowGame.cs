@@ -53,18 +53,18 @@ namespace Rellow
 
         private readonly UIColors _gameColors;
         private DrawingInfos _currentWordDrawingInfos;
-        
+
         private bool _isPaused = false;
 
         private int _numberOfVictories;
         private const int _numberOfVictoriesToIncreaseDifficulty = 5;
 
         private OverlayPopup _gameOverOverlayPopup;
-        private SoundManager _soundManager;
+        private readonly SoundManager _soundManager;
         private readonly ProgressBar _timeProgressBar;
 
-        private List<PopupText> _scoreDifferentialPopups;
-        private TimeSpan _popupScoreDuration = TimeSpan.FromSeconds(2);
+        private readonly List<PopupText> _scoreDifferentialPopups;
+        private readonly TimeSpan _popupScoreDuration = TimeSpan.FromSeconds(2);
 
         public RellowGame(
             IScreenTransformationMatrixProvider matrixScaleProvider,
@@ -75,6 +75,7 @@ namespace Rellow
             ILocalizedStringsRepository localizedStringsRepository)
         {
             _localizedStringsRepository = localizedStringsRepository;
+            _matrixScaleProvider = matrixScaleProvider ?? throw new ArgumentNullException(nameof(matrixScaleProvider));
 
             _gameButtonsManager = new GameButtonsManager(
                  assetsLoader,
@@ -89,12 +90,11 @@ namespace Rellow
 
             _currentGameState = GameStates.PlayingWaitingForInput;
             _gameColors = new UIColors(_gameButtonsManager.SpawnableColors.Select(c => c.ColorGraphic).ToArray());
-            _matrixScaleProvider = matrixScaleProvider ?? throw new ArgumentNullException(nameof(matrixScaleProvider));
-
+        
             _choiceTime = TimeSpan.FromSeconds(2.5);
 
             _backgroundRectangle = new Rectangle(0, 0, matrixScaleProvider.VirtualWidth, matrixScaleProvider.VirtualHeight);
-     
+
             _scoreTextTitle = localizedStringsRepository.Get(GameStringsLoader.ScoreStringKey);
 
             _gameButtonsManager = new GameButtonsManager(
@@ -117,8 +117,8 @@ namespace Rellow
             _timeProgressBar = new ProgressBar(
                 new Rectangle(
                     0, 0,
-                    _matrixScaleProvider.VirtualWidth,
-                    _matrixScaleProvider.VirtualHeight),
+                    matrixScaleProvider.VirtualWidth,
+                    matrixScaleProvider.VirtualHeight),
                 _gameColors.TimerBarColor,
                 (int)_choiceTime.TotalMilliseconds);
 
@@ -276,7 +276,9 @@ namespace Rellow
         public void Update(TimeSpan elapsed)
         {
             if (_isPaused)
+            {
                 return;
+            }
 
             for (int p = _scoreDifferentialPopups.Count - 1; p >= 0; --p)
             {
@@ -286,7 +288,9 @@ namespace Rellow
                 scoreDifferentialPopup.DrawingInfos.OverlayColor = scoreDifferentialPopup.PopupObject.OverlayColor;
 
                 if (scoreDifferentialPopup.PopupObject.IsCompleted)
+                {
                     _scoreDifferentialPopups.RemoveAt(p);
+                }
             }
 
             switch (_currentGameState)
@@ -327,14 +331,17 @@ namespace Rellow
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(transformMatrix: _matrixScaleProvider.ScaleMatrix);
+            spriteBatch.Begin();
             spriteBatch.DrawRectangle(_backgroundRectangle, _gameColors.BackgroundColor);
             _timeProgressBar.Draw(spriteBatch);
             spriteBatch.DrawRectangle(_colorTextBackgroundRectangle, _gameColors.CurrentWordBackgroundColor);
             spriteBatch.DrawString(_writingFont, _scoreText.ToString(), _scoreTextDrawingInfos);
             spriteBatch.DrawString(_writingFont, _gameButtonsManager.CurrentWord, _currentWordDrawingInfos);
             foreach (var scoreDifferentialPopup in _scoreDifferentialPopups)
+            {
                 spriteBatch.DrawString(_writingFont, scoreDifferentialPopup.Text, scoreDifferentialPopup.DrawingInfos);
+            }
+
             _gameButtonsManager.Draw(spriteBatch);
 
             if (_currentGameState == GameStates.Lost)

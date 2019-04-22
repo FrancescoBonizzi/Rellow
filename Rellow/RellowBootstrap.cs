@@ -105,7 +105,7 @@ namespace Rellow
                   new GameWindowScreenSizeChangedNotifier(Window),
                   GraphicsDeviceManager.GraphicsDevice,
                   1080, 1920,
-                  !GraphicsDeviceManager.IsFullScreen);
+                  true);
             base.Initialize();
         }
 
@@ -161,7 +161,6 @@ namespace Rellow
             var mainMenuFactory = new Func<MainMenuPage>(
                 () => new MainMenuPage(
                     _assetsLoader,
-                    _soundManager,
                     _orchestrator,
                     _matrixScaleProvider,
                     _localizedStringsRepository,

@@ -28,7 +28,7 @@ namespace Rellow
         private readonly IWebPageOpener _webPageOpener;
         private readonly SoundManager _soundManager;
         private readonly GraphicsDevice _graphicsDevice;
-        private FadeObject _stateTransition;
+        private readonly FadeObject _stateTransition;
         private Action _afterTransitionAction;
 
         private RenderTarget2D _renderTarget;
@@ -84,10 +84,14 @@ namespace Rellow
         public void SetMenuState()
         {
             if (_currentState == GameStates.Menu)
+            {
                 return;
+            }
 
             if (_stateTransition.IsFading)
+            {
                 return;
+            }
 
             _soundManager.StopSounds();
             _soundManager.PlayMenu();
@@ -108,8 +112,8 @@ namespace Rellow
         {
             _renderTarget = new RenderTarget2D(
                 _graphicsDevice,
-                _matrixScaleProvider.RealScreenWidth,
-                _matrixScaleProvider.RealScreenHeight);
+                _matrixScaleProvider.VirtualWidth,
+                _matrixScaleProvider.VirtualHeight);
         }
 
         public void SetAboutState()
@@ -132,10 +136,14 @@ namespace Rellow
         public void SetGameState()
         {
             if (_currentState == GameStates.Playing)
+            {
                 return;
+            }
 
             if (_stateTransition.IsFading)
+            {
                 return;
+            }
 
             _soundManager.StopSounds();
             _soundManager.PlayPlaying();
@@ -146,7 +154,9 @@ namespace Rellow
         public void HandleTouchInput(Vector2? touchLocation = null)
         {
             if (touchLocation == null)
+            {
                 return;
+            }
 
             switch (_currentState)
             {
@@ -163,7 +173,9 @@ namespace Rellow
         public void Update(TimeSpan elapsed)
         {
             if (IsPaused)
+            {
                 return;
+            }
 
             if (_stateTransition.IsFading)
             {
@@ -199,8 +211,13 @@ namespace Rellow
         public void TogglePause()
         {
             if (IsPaused)
+            {
                 Resume();
-            else Pause();
+            }
+            else
+            {
+                Pause();
+            }
         }
 
         public void Back()
@@ -221,7 +238,9 @@ namespace Rellow
         public void Draw(SpriteBatch spriteBatch, GraphicsDevice graphics)
         {
             if (IsPaused)
+            {
                 return;
+            }
 
             // Disegno tutto su un render target...
             graphics.SetRenderTarget(_renderTarget);
@@ -241,7 +260,7 @@ namespace Rellow
             // ...per poter fare il fade dei vari componenti in modo indipendente
             graphics.SetRenderTarget(null);
             graphics.Clear(Color.Black);
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: _matrixScaleProvider.ScaleMatrix);
             spriteBatch.Draw(_renderTarget, Vector2.Zero, _stateTransition.OverlayColor);
             spriteBatch.End();
         }
