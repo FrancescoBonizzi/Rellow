@@ -98,7 +98,6 @@
     <Content Include="Assets\ContentBuilder\Spritesheet.png" />
     <Content Include="Assets\ContentBuilder\Spritesheet.txt" />
     <None Include="Assets\_Other\Icon512x512.png" />
-    <None Include="Assets\_Other\Icon72x72.png" />
     <None Include="Assets\_Other\Music-Menu.wav" />
     <None Include="Assets\_Other\Music-Play.wav" />
     <None Include="Assets\_Other\Screenshots\En\1.png" />
@@ -115,6 +114,9 @@
     <None Include="Assets\_Other\Screenshots\It\5.png" />
     <None Include="Assets\_Other\Screenshots\It\6.png" />
     <None Include="Assets\_Other\Screenshots\It\7.png" />
+    <Content Include="Assets\_TextureProject\Export\button-bottom.png" />
+    <Content Include="Assets\_TextureProject\Export\button-up-pressed.png" />
+    <Content Include="Assets\_TextureProject\Export\button-up-released.png" />
     <Content Include="Assets\_TextureProject\Export\manina.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -10,7 +10,8 @@ namespace Rellow.Android
 {
     [Activity(
         Label = "Rellow",
-        Icon = "@drawable/icon",
+        Icon = "@mipmap/ic_launcher",
+        RoundIcon = "@mipmap/ic_launcher_round",
         MainLauncher = true,
         AlwaysRetainTaskState = true,
         LaunchMode = LaunchMode.SingleInstance,
