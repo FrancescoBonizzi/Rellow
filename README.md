@@ -1,4 +1,4 @@
-# ![Logo](Rellow/Assets/_Other/Icon72x72.png) Rellow
+# <img src="Rellow/Assets/_Other/web_hi_res_512.png" alt="drawing" width="72"/> Rellow
 
 [<img 
 	height="60px" 
