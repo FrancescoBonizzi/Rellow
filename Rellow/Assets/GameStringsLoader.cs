@@ -15,6 +15,16 @@ namespace Rellow.Assets
         public const string VioletColorKey = "ColorsViolet";
         public const string LightBlueColorKey = "ColorsLightBlue";
 
+        public const string SecondaryLanguageYellowColorKey = "SecondaryLanguageColorsYellowKey";
+        public const string SecondaryLanguageRedColorKey = "SecondaryLanguageColorsRedKey";
+        public const string SecondaryLanguageGreenColorKey = "SecondaryLanguageColorsGreen";
+        public const string SecondaryLanguageBlueColorKey = "SecondaryLanguageColorsBlue";
+        public const string SecondaryLanguageOrangeColorKey = "SecondaryLanguageColorsOrange";
+        public const string SecondaryLanguageGrayColorKey = "SecondaryLanguageColorsGray";
+        public const string SecondaryLanguageWhiteColorKey = "SecondaryLanguageColorsWhite";
+        public const string SecondaryLanguageVioletColorKey = "SecondaryLanguageColorsViolet";
+        public const string SecondaryLanguageLightBlueColorKey = "SecondaryLanguageColorsLightBlue";
+
         public const string PlayStringKey = "Play";
         public const string AboutStringKey = "About";
         public const string PlayAgainStringKey = "PlayAgain";
@@ -38,6 +48,16 @@ namespace Rellow.Assets
                 localizedStringsRepository.AddString(VioletColorKey, "Viola");
                 localizedStringsRepository.AddString(LightBlueColorKey, "Azzurro");
 
+                localizedStringsRepository.AddString(SecondaryLanguageYellowColorKey, "Yellow");
+                localizedStringsRepository.AddString(SecondaryLanguageRedColorKey, "Red");
+                localizedStringsRepository.AddString(SecondaryLanguageGreenColorKey, "Green");
+                localizedStringsRepository.AddString(SecondaryLanguageBlueColorKey, "Blue");
+                localizedStringsRepository.AddString(SecondaryLanguageOrangeColorKey, "Orange");
+                localizedStringsRepository.AddString(SecondaryLanguageGrayColorKey, "Gray");
+                localizedStringsRepository.AddString(SecondaryLanguageWhiteColorKey, "White");
+                localizedStringsRepository.AddString(SecondaryLanguageVioletColorKey, "Violet");
+                localizedStringsRepository.AddString(SecondaryLanguageLightBlueColorKey, "Light blue");
+
                 localizedStringsRepository.AddString(PlayStringKey, "Gioca");
                 localizedStringsRepository.AddString(AboutStringKey, "About");
                 localizedStringsRepository.AddString(PlayAgainStringKey, "Gioca ancora");
@@ -58,6 +78,16 @@ namespace Rellow.Assets
                 localizedStringsRepository.AddString(WhiteColorKey, "White");
                 localizedStringsRepository.AddString(VioletColorKey, "Violet");
                 localizedStringsRepository.AddString(LightBlueColorKey, "Light blue");
+
+                localizedStringsRepository.AddString(SecondaryLanguageYellowColorKey, "Yellow");
+                localizedStringsRepository.AddString(SecondaryLanguageRedColorKey, "Red");
+                localizedStringsRepository.AddString(SecondaryLanguageGreenColorKey, "Green");
+                localizedStringsRepository.AddString(SecondaryLanguageBlueColorKey, "Blue");
+                localizedStringsRepository.AddString(SecondaryLanguageOrangeColorKey, "Orange");
+                localizedStringsRepository.AddString(SecondaryLanguageGrayColorKey, "Gray");
+                localizedStringsRepository.AddString(SecondaryLanguageWhiteColorKey, "White");
+                localizedStringsRepository.AddString(SecondaryLanguageVioletColorKey, "Violet");
+                localizedStringsRepository.AddString(SecondaryLanguageLightBlueColorKey, "Light blue");
 
                 localizedStringsRepository.AddString(PlayStringKey, "Play");
                 localizedStringsRepository.AddString(AboutStringKey, "About");

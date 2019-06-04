@@ -15,7 +15,7 @@ namespace Rellow
         private int _activeButtonsNumber;
         private readonly Vector2 _startingPosition;
         private const int _totalNumberOfButtons = 9;
-        private static Random _random = new Random();
+        private static readonly Random _random = new Random();
         private const int _squaredButtonSize = 250;
         private const int _padding = 100;
 
@@ -38,28 +38,63 @@ namespace Rellow
 
             SpawnableColors = new ColorWithName[]
             {
-                new ColorWithName(Color.Yellow, localizedStringsRepository.Get(GameStringsLoader.YellowColorKey)),
-                new ColorWithName(Color.Red, localizedStringsRepository.Get(GameStringsLoader.RedColorKey)),
-                new ColorWithName(Color.Blue, localizedStringsRepository.Get(GameStringsLoader.BlueColorKey)),
+                new ColorWithName(
+                    Color.Yellow,
+                    localizedStringsRepository.Get(GameStringsLoader.YellowColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageYellowColorKey)),
 
-                new ColorWithName(new Color(0, 255, 0), localizedStringsRepository.Get(GameStringsLoader.GreenColorKey)),
-                new ColorWithName(new Color(255, 115, 0), localizedStringsRepository.Get(GameStringsLoader.OrangeColorKey)),
-                new ColorWithName(new Color(255, 0, 255), localizedStringsRepository.Get(GameStringsLoader.VioletColorKey)),
+                new ColorWithName(
+                    Color.Red,
+                    localizedStringsRepository.Get(GameStringsLoader.RedColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageRedColorKey)),
 
-                new ColorWithName(new Color(150, 150, 150), localizedStringsRepository.Get(GameStringsLoader.GrayColorKey)),
-                new ColorWithName(Color.White,localizedStringsRepository.Get(GameStringsLoader.WhiteColorKey)),
-                new ColorWithName(new Color(0, 255, 255), localizedStringsRepository.Get(GameStringsLoader.LightBlueColorKey))
+                new ColorWithName(
+                    Color.Blue,
+                    localizedStringsRepository.Get(GameStringsLoader.BlueColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageBlueColorKey)),
+
+                new ColorWithName(
+                    new Color(0, 255, 0),
+                    localizedStringsRepository.Get(GameStringsLoader.GreenColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageGreenColorKey)),
+
+                new ColorWithName(
+                    new Color(255, 115, 0),
+                    localizedStringsRepository.Get(GameStringsLoader.OrangeColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageOrangeColorKey)),
+
+                new ColorWithName(
+                    new Color(255, 0, 255),
+                    localizedStringsRepository.Get(GameStringsLoader.VioletColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageVioletColorKey)),
+
+                new ColorWithName(
+                    new Color(150, 150, 150),
+                    localizedStringsRepository.Get(GameStringsLoader.GrayColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageGrayColorKey)),
+
+                new ColorWithName(
+                    Color.White,
+                    localizedStringsRepository.Get(GameStringsLoader.WhiteColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageWhiteColorKey)),
+
+                new ColorWithName(
+                    new Color(0, 255, 255),
+                    localizedStringsRepository.Get(GameStringsLoader.LightBlueColorKey),
+                    localizedStringsRepository.Get(GameStringsLoader.SecondaryLanguageLightBlueColorKey))
             };
 
             for (int c = 0; c < 3; ++c)
+            {
                 for (int r = 0; r < 3; ++r)
                 {
-                    int index = c * 3 + r;
+                    int index = (c * 3) + r;
                     _buttons[index] = new GameButton(
                         assetsLoader,
                         _squaredButtonSize,
                         SpawnableColors[index]);
                 }
+            }
         }
 
         public void HandleInput(Vector2 touchPosition)
@@ -92,6 +127,10 @@ namespace Rellow
             // Scelgo un colore all'interno di questi
             int pickedColorIndex = _random.Next(0, pickableButtons.Count);
 
+            _buttons[pickedColorIndex]
+                .ColorWithName
+                .ShuffleColorName();
+
             CurrentWordForegroundColor = _buttons[pickedColorIndex]
                 .ColorWithName
                 .ColorGraphic;
@@ -106,23 +145,29 @@ namespace Rellow
                 .ColorName;
 
             for (int c = 0; c < 3; ++c)
+            {
                 for (int r = 0; r < 3; ++r)
                 {
-                    int index = c * 3 + r;
+                    int index = (c * 3) + r;
 
                     if (index > _activeButtonsNumber)
+                    {
                         break;
+                    }
 
                     _buttons[index].SetPosition(new Vector2(
-                        _startingPosition.X + r * _squaredButtonSize + _padding * r,
-                        _startingPosition.Y + c * _squaredButtonSize + _padding * c));
+                        _startingPosition.X + (r * _squaredButtonSize) + (_padding * r),
+                        _startingPosition.Y + (c * _squaredButtonSize) + (_padding * c)));
                 }
+            }
         }
 
         public void Update(TimeSpan elapsed)
         {
             foreach (var b in _buttons)
+            {
                 b.Update(elapsed);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
