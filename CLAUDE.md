@@ -172,8 +172,8 @@ Eseguire **una fase per sessione**. Non iniziare la fase successiva senza approv
 
 | Fase | Contenuto | Stato |
 |---|---|---|
-| **1 — Scaffolding** | `package.json`, `tsconfig.json`, `vite.config.ts`, `index.html`, `main.ts`, `router.ts`, `AudioUnlocker.ts`, struttura directory vuota | ⬜ |
-| **2 — Asset pipeline** | `RellowAssets.ts`, `AssetsLoader.ts`, copia file audio/font/sprites in `public/assets/` | ⬜ |
+| **1 — Scaffolding** | `package.json`, `tsconfig.json`, `vite.config.ts`, `index.html`, `main.ts`, `router.ts`, `AudioUnlocker.ts`, struttura directory vuota | ✅ |
+| **2 — Asset pipeline** | `RellowAssets.ts`, `AssetsLoader.ts`, copia file audio/font/sprites in `public/assets/` | ✅ |
 | **3 — Menu page** | `menu.ts`, `SoundManager.ts`, bottone audio unlock, navigazione verso `/game` | ⬜ |
 | **4 — Scheletro di gioco** | `gamebootstrap.ts` (app init, resize, ticker), `Game.ts` vuoto, `ScoreRepository.ts` | ⬜ |
 | **5 — Colori e griglia** | `colors.ts`, `ColorButton.ts`, `ColorButtonGrid.ts`, `WordDisplay.ts` | ⬜ |
