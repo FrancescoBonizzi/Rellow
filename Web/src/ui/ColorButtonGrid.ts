@@ -23,6 +23,7 @@ export class ColorButtonGrid {
     private readonly _buttons: ColorButton[];
     private _activeCount: number = INITIAL_ACTIVE;
     private _currentWord: string = '';
+    private _inputEnabled: boolean = true;
 
     constructor(parent: Container, assets: RellowAssets) {
         this._buttons = [];
@@ -89,7 +90,12 @@ export class ColorButtonGrid {
         });
     }
 
+    setInputEnabled(enabled: boolean): void {
+        this._inputEnabled = enabled;
+    }
+
     private _onButtonPressed = (button: ColorButton): void => {
+        if (!this._inputEnabled) return;
         if (button.color.name === this._currentWord) {
             this.onWon?.();
         } else {
