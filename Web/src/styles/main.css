@@ -247,6 +247,64 @@ canvas { display: block; }
     50%       { text-shadow: 4px 4px 0 var(--black), 0 0 24px var(--foreground), 0 0 40px var(--foreground); }
 }
 
+/* --- Gameover --- */
+.gameover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 clamp(16px, 5vw, 48px);
+    gap: clamp(24px, 6vh, 48px);
+}
+
+.new-record-badge {
+    font-size: clamp(12px, 3.5vw, 18px);
+    color: var(--black);
+    background: var(--foreground);
+    border: 3px solid var(--black);
+    padding: clamp(8px, 2vw, 14px) clamp(16px, 4vw, 28px);
+    box-shadow: 4px 4px 0 var(--black);
+    text-align: center;
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+.gameover-scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(16px, 4vh, 32px);
+    width: 100%;
+}
+
+.gameover-score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.gameover-label {
+    font-size: clamp(9px, 2.5vw, 14px);
+    color: var(--foreground);
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+}
+
+.gameover-value {
+    font-size: clamp(36px, 12vw, 80px);
+    color: var(--foreground);
+    text-shadow:
+        3px 3px 0 var(--black),
+        -2px -2px 0 var(--black),
+        2px -2px 0 var(--black),
+        -2px 2px 0 var(--black);
+}
+
+.gameover-score-item--record .gameover-value {
+    font-size: clamp(24px, 8vw, 52px);
+    opacity: 0.75;
+}
+
 @media (hover: none) and (pointer: coarse) {
     .button:hover {
         transform: none !important;

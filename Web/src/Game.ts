@@ -23,6 +23,7 @@ class Game {
     private readonly _colorButtonGrid: ColorButtonGrid;
     private readonly _wordDisplay: WordDisplay;
     private readonly _scoreText: ScoreText;
+    private readonly _soundManager: SoundManager;
     private _state: GameState = 'waiting';
     private _choiceTime: number = INITIAL_CHOICE_TIME_MS;
     private _timer: number = INITIAL_CHOICE_TIME_MS;
@@ -33,8 +34,9 @@ class Game {
     constructor(
         assets: RellowAssets,
         app: Application,
-        _soundManager: SoundManager,
+        soundManager: SoundManager,
     ) {
+        this._soundManager = soundManager;
         this._stage = new Container();
         app.stage.addChild(this._stage);
 
@@ -109,14 +111,14 @@ class Game {
         this._state = 'after_won';
         this._pauseTimer = PAUSE_BETWEEN_ROUNDS;
         this._colorButtonGrid.setInputEnabled(false);
-        // Fase 9: this._soundManager.playOk();
+        this._soundManager.playOk();
     }
 
     private _handleLost(): void {
         if (this._state === 'lost') return;
         this._state = 'lost';
         this._colorButtonGrid.setInputEnabled(false);
-        // Fase 9: this._soundManager.playWrong();
+        this._soundManager.playWrong();
 
         ScoreRepository.setScore('gameover', this._score);
         if (ScoreRepository.isNewRecord(this._score))

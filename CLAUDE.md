@@ -174,13 +174,13 @@ Eseguire **una fase per sessione**. Non iniziare la fase successiva senza approv
 |---|---|---|
 | **1 — Scaffolding** | `package.json`, `tsconfig.json`, `vite.config.ts`, `index.html`, `main.ts`, `router.ts`, `AudioUnlocker.ts`, struttura directory vuota | ✅ |
 | **2 — Asset pipeline** | `RellowAssets.ts`, `AssetsLoader.ts`, copia file audio/font/sprites in `public/assets/` | ✅ |
-| **3 — Menu page** | `menu.ts`, `SoundManager.ts`, bottone audio unlock, navigazione verso `/game` | ⬜ |
-| **4 — Scheletro di gioco** | `gamebootstrap.ts` (app init, resize, ticker), `Game.ts` vuoto, `ScoreRepository.ts` | ⬜ |
-| **5 — Colori e griglia** | `colors.ts`, `ColorButton.ts`, `ColorButtonGrid.ts`, `WordDisplay.ts` | ⬜ |
-| **6 — Game loop** | `Game.ts` completo: stato waiting/won/lost, timer, shuffle UI colors, pausa 150ms, punteggio | ⬜ |
-| **7 — ProgressBar e HUD** | `ProgressBar.ts`, `ScoreText.ts` con popup | ⬜ |
-| **8 — Game over page** | `gameover.ts`, record check, bottone Play Again | ⬜ |
-| **9 — Audio in-game** | Integrazione `SoundManager` nel game loop (win/lose/music) | ⬜ |
+| **3 — Menu page** | `menu.ts`, `SoundManager.ts`, bottone audio unlock, navigazione verso `/game` | ✅ |
+| **4 — Scheletro di gioco** | `gamebootstrap.ts` (app init, resize, ticker), `Game.ts` vuoto, `ScoreRepository.ts` | ✅ |
+| **5 — Colori e griglia** | `colors.ts`, `ColorButton.ts`, `ColorButtonGrid.ts`, `WordDisplay.ts` | ✅ |
+| **6 — Game loop** | `Game.ts` completo: stato waiting/won/lost, timer, shuffle UI colors, pausa 150ms, punteggio | ✅ |
+| **7 — ProgressBar e HUD** | `ProgressBar.ts`, `ScoreText.ts` con popup | ✅ |
+| **8 — Game over page** | `gameover.ts`, record check, bottone Play Again | ✅ |
+| **9 — Audio in-game** | Integrazione `SoundManager` nel game loop (win/lose/music) | ✅ |
 | **10 — Polish e test** | Responsive su mobile reale, audio unlock Safari, animazioni floating text | ⬜ |
 
 ---
