@@ -45,7 +45,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--foreground);
-    font: 500 16px/1.5 "Press Start 2P", monospace;
+    font: 400 16px/1.5 "Press Start 2P", monospace;
 }
 
 ul, ol {
@@ -96,7 +96,7 @@ main, .menu, .gameover {
 .title {
     text-align: center;
     font-size: clamp(48px, 15vw, 128px);
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
     color: var(--foreground);
     animation: slowPulseTitle 3s ease-in-out infinite;
@@ -121,7 +121,7 @@ main, .menu, .gameover {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: clamp(14px, 4vw, 20px);
     display: inline-flex;
     align-items: center;
@@ -153,6 +153,40 @@ main, .menu, .gameover {
     opacity: 0.5;
     pointer-events: none;
     cursor: default;
+}
+
+.button--secondary {
+    background: transparent;
+    border: 2px solid var(--foreground);
+    color: var(--foreground);
+    box-shadow: none;
+    font-size: clamp(10px, 2.5vw, 14px);
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+    background: rgba(255, 234, 135, 0.1);
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 clamp(16px, 5vw, 48px);
+}
+
+.menu-content .title {
+    margin-bottom: clamp(16px, 4vh, 32px);
+}
+
+.menu-subtitle {
+    font-size: clamp(9px, 3vw, 14px);
+    color: var(--foreground);
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: clamp(40px, 10vh, 80px);
+    line-height: 1.8;
 }
 
 .menu-actions {
