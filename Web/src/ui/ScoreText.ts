@@ -18,9 +18,10 @@ export class ScoreText {
             fontSize: 80,
             fill: 0xffea87,
             align: 'center',
+            stroke: { color: 0x000000, width: 6 },
         });
 
-        this._text = new Text({ text: 'Punteggio: 0', style });
+        this._text = new Text({ text: '0', style });
         this._text.anchor.set(0.5, 0.5);
         this._text.x = SCORE_X;
         this._text.y = SCORE_Y;
@@ -31,6 +32,7 @@ export class ScoreText {
             fontSize: 60,
             fill: 0xffea87,
             align: 'center',
+            stroke: { color: 0x000000, width: 4 },
         });
 
         this._popup = new Text({ text: '', style: popupStyle });
@@ -42,7 +44,7 @@ export class ScoreText {
     }
 
     setScore(score: number): void {
-        this._text.text = `Punteggio: ${score}`;
+        this._text.text = `${score}`;
     }
 
     setColor(color: number): void {

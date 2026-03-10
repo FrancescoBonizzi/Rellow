@@ -12,7 +12,7 @@ export function renderGameOverPage(container: HTMLElement): void {
         <main id="gameover-root">
             <section class="gameover">
                 <div class="gameover-content">
-                    <h1 class="title">GAME<br>OVER</h1>
+                    <h1 class="title">GAME OVER</h1>
 
                     <div class="new-record-badge" style="${isNew ? '' : 'display:none'}">
                         &#9733; NUOVO RECORD &#9733;

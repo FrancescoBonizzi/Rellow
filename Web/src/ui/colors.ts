@@ -35,9 +35,10 @@ export function pickRandom<T>(arr: T[]): T {
 }
 
 export function shuffleUIColors(colors: GameColor[]): UIColorConfig {
+    const shuffled = shuffleArray(colors);
     return {
-        timerBarColor:   pickRandom(colors).pixiColor,
-        scoreTextColor:  pickRandom(colors).pixiColor,
-        backgroundColor: pickRandom(colors).pixiColor,
+        backgroundColor: shuffled[0]!.pixiColor,
+        timerBarColor:   shuffled[1]!.pixiColor,
+        scoreTextColor:  shuffled[2]!.pixiColor,
     };
 }

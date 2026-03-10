@@ -1,36 +1,47 @@
-# <img src="Rellow/Assets/_Other/web_hi_res_512.png" alt="drawing" width="72"/> Rellow
+# Rellow
 
-[<img 
-	height="60px" 
-	alt='Get it on Google Play' 
-	src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>](https://play.google.com/store/apps/details?id=com.francescobonizzi.rellow)
-[<img 
-	height="60px"
-	src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' 
-	alt='English badge' />](https://www.microsoft.com/store/apps/9N5JJ68QFBPB)
+![Icona di Rellow](CSharp/Rellow/Assets/_Other/web_hi_res_512.png)
 
-Rellow is a concentration game in which you have to choose the right colored button between all buttons available... On the top of the screen you will see a word that tells you which is the right color, but this won't be so simple because the word itself is colored with another color.
+[Gioca ora sul web](https://imaginesoftware.it/open-source-projects/rellow)
 
-As you win, the difficulty will increase: you will have more colors to choose from and less time to decide!
+Rellow è un gioco di concentrazione in cui devi scegliere il bottone del colore giusto tra quelli disponibili. In cima allo schermo apparirà una parola che ti dice quale colore scegliere — ma non sarà semplice, perché la parola stessa è colorata con un colore diverso.
 
-# Screenshots
+Man mano che vinci, la difficoltà aumenta: avrai più colori tra cui scegliere e meno tempo per decidere!
 
-<img align="left" style="margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/1.png" width="150">
+## Caratteristiche
 
-<img align="left" style="margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/2.png" width="150">
+- Meccanica basata sull'effetto Stroop
+- Difficoltà crescente: più bottoni, meno tempo
+- Colori che cambiano a ogni round per distrarti
+- Colonna sonora originale
+- Grafica vivace in stile pixel art
 
-<img align="left" style="margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/5.png" width="150">
+## Screenshot
 
-<img style="margin-left: 4px;" src="https://github.com/FrancescoBonizzi/Rellow/raw/master/Rellow/Assets/_Other/Screenshots/En/7.png" width="150">
+![Screenshot 1](CSharp/Rellow/Assets/_Other/Screenshots/En/1.png)
 
----
+![Screenshot 2](CSharp/Rellow/Assets/_Other/Screenshots/En/2.png)
 
-The game is entirely **free** and open source: I didn't use any third party library to track or log user events. There are no ads too.
+![Screenshot 3](CSharp/Rellow/Assets/_Other/Screenshots/En/5.png)
 
-I coded this game with these libraries:
-- [MonoGame](https://github.com/MonoGame)
-- [FbonizziMonoGame](https://github.com/FrancescoBonizzi/FbonizziMonoGame)
+![Screenshot 4](CSharp/Rellow/Assets/_Other/Screenshots/En/7.png)
 
 ---
 
-If you like my work, please consider to [offer me an espresso!](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DTT7P8N3TV7N6&currency_code=EUR&source=url) ;-)
+Il gioco è completamente **gratuito** e open source: non uso librerie di terze parti per tracciare o registrare eventi utente e non ci sono pubblicità.
+
+Ci sono due versioni:
+
+1. Versione CSharp, che trovi nella cartella `CSharp`.
+
+   Ho sviluppato questa versione (Android, Windows...) con queste librerie:
+   - [MonoGame](https://github.com/MonoGame)
+   - [FbonizziMonoGame](https://github.com/FrancescoBonizzi/FbonizziMonoGame)
+
+2. Versione Web, che puoi giocare [qui](https://imaginesoftware.it/open-source-projects/rellow).
+
+   Ho sviluppato questa versione con [PixiJS](https://pixijs.com/). **Supporterò solo questa**.
+
+---
+
+Se apprezzi il mio lavoro, puoi [offrirmi un espresso](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DTT7P8N3TV7N6&currency_code=EUR&source=url).

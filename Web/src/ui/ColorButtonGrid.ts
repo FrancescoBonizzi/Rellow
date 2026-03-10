@@ -1,7 +1,7 @@
 import { Container } from 'pixi.js';
 import { RellowAssets } from '../assets/RellowAssets';
 import { ColorButton } from './ColorButton';
-import { GAME_COLORS, shuffleArray } from './colors';
+import { GAME_COLORS } from './colors';
 
 const BUTTON_SIZE  = 250;
 const BUTTON_PADDING = 100;
@@ -43,8 +43,7 @@ export class ColorButtonGrid {
     }
 
     setupNewRound(): RoundSetup {
-        const shuffledIndices = shuffleArray([0, 1, 2, 3, 4, 5, 6, 7, 8]);
-        const activeIndices = shuffledIndices.slice(0, this._activeCount);
+        const activeIndices = Array.from({length: this._activeCount}, (_, i) => i);
 
         this._applyVisibility(activeIndices);
 
