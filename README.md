@@ -18,13 +18,13 @@ Man mano che vinci, la difficoltà aumenta: avrai più colori tra cui scegliere 
 
 ## Screenshot
 
-![Screenshot 1](CSharp/Rellow/Assets/_Other/Screenshots/En/1.png)
+![Screenshot 1](CSharp/Rellow/Assets/_Other/Screenshots/It/1.png)
 
-![Screenshot 2](CSharp/Rellow/Assets/_Other/Screenshots/En/2.png)
+![Screenshot 2](CSharp/Rellow/Assets/_Other/Screenshots/It/2.png)
 
-![Screenshot 3](CSharp/Rellow/Assets/_Other/Screenshots/En/5.png)
+![Screenshot 3](CSharp/Rellow/Assets/_Other/Screenshots/It/5.png)
 
-![Screenshot 4](CSharp/Rellow/Assets/_Other/Screenshots/En/7.png)
+![Screenshot 4](CSharp/Rellow/Assets/_Other/Screenshots/It/7.png)
 
 ---
 
