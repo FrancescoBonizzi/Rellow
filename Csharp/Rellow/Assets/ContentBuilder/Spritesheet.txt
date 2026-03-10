@@ -1,0 +1,5 @@
+
+button-bottom|1|1|250|250
+button-up-pressed|1|253|250|250
+button-up-released|253|1|250|250
+manina|253|253|62|62

@@ -1,0 +1,40 @@
+{
+  "frames": {
+    "button-bottom": {
+      "frame": { "x": 1, "y": 1, "w": 250, "h": 250 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 250, "h": 250 },
+      "sourceSize": { "w": 250, "h": 250 }
+    },
+    "button-up-pressed": {
+      "frame": { "x": 1, "y": 253, "w": 250, "h": 250 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 250, "h": 250 },
+      "sourceSize": { "w": 250, "h": 250 }
+    },
+    "button-up-released": {
+      "frame": { "x": 253, "y": 1, "w": 250, "h": 250 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 250, "h": 250 },
+      "sourceSize": { "w": 250, "h": 250 }
+    },
+    "manina": {
+      "frame": { "x": 253, "y": 253, "w": 62, "h": 62 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 62, "h": 62 },
+      "sourceSize": { "w": 62, "h": 62 }
+    }
+  },
+  "meta": {
+    "app": "Rellow",
+    "version": "1.0",
+    "image": "spritesheet.png",
+    "format": "RGBA8888",
+    "size": { "w": 512, "h": 512 },
+    "scale": "1"
+  }
+}
