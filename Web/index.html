@@ -1,26 +1,95 @@
 <!doctype html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/png" href="/rellow-logo.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <title>RELLOW</title>
-    <meta name="description" content="RELLOW è un gioco arcade sullo Stroop Effect: premi il bottone del colore giusto prima che il tempo scada. Quanti round riesci a superare?" />
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/rellow-logo.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#ff1243" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link
+      rel="canonical"
+      href="https://imaginesoftware.it/open-source-projects/rellow"
+    />
+    <title>RELLOW | Imagine Software</title>
+    <meta
+      name="description"
+      content="RELLOW è un gioco arcade sullo Stroop Effect: premi il bottone del colore giusto prima che il tempo scada. Quanti round riesci a superare?"
+    />
 
     <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="RELLOW – Il gioco dei colori" />
-    <meta property="og:description" content="Stroop Effect arcade: il nome dice un colore, il testo ne mostra un altro. Premi quello giusto!" />
-    <meta property="og:site_name" content="RELLOW" />
-</head>
-<body>
-<div id="app">
-</div>
-<script type="module" src="/src/main.ts"></script>
-</body>
+    <meta
+      property="og:description"
+      content="Stroop Effect arcade: il nome dice un colore, il testo ne mostra un altro. Premi quello giusto!"
+    />
+    <meta
+      property="og:url"
+      content="https://imaginesoftware.it/open-source-projects/rellow"
+    />
+    <meta property="og:site_name" content="Imagine Software" />
+    <meta
+      property="og:image"
+      content="https://imaginesoftware.it/images/screenshots/rellow-game-screenshot-1.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="479" />
+    <meta property="og:image:height" content="798" />
+    <meta
+      property="og:image:alt"
+      content="Screenshot di RELLOW con pulsanti colorati e scritta Stroop Effect"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RELLOW – Il gioco dei colori" />
+    <meta
+      name="twitter:description"
+      content="Stroop Effect arcade: il nome dice un colore, il testo ne mostra un altro. Premi quello giusto!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://imaginesoftware.it/images/screenshots/rellow-game-screenshot-1.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "RELLOW",
+        "description": "RELLOW è un gioco di concentrazione basato sullo Stroop Effect: premi il pulsante del colore giusto prima che il tempo scada.",
+        "url": "https://imaginesoftware.it/rellow-play/index.html",
+        "image": "https://imaginesoftware.it/images/screenshots/rellow-game-screenshot-1.png",
+        "genre": "Puzzle",
+        "playMode": "SinglePlayer",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web",
+        "author": {
+          "@type": "Person",
+          "name": "Francesco Bonizzi",
+          "url": "https://imaginesoftware.it"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Imagine Software",
+          "url": "https://imaginesoftware.it"
+        },
+        "inLanguage": "it",
+        "isAccessibleForFree": true
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
