@@ -6,5 +6,5 @@ export default defineConfig({
       input: "index.html",
     },
   },
-  base: "/rellow-play", // Per nextJs
+  base: "/rellow-play/", // Per nextJs
 });
