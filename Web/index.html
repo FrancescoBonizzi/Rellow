@@ -89,7 +89,13 @@
     </script>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Visibile mentre scarica lo script; il primo render del router lo sostituisce. -->
+    <div id="app">
+      <div class="avvio">
+        <img class="avvio__logo" src="/rellow-logo.png" alt="" width="96" height="96" />
+        <div class="avvio__barra" role="progressbar" aria-label="Caricamento"><span></span></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
