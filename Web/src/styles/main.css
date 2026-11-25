@@ -376,7 +376,15 @@ canvas { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .avvio__barra span {
     width: 100%;
-    animation: none;
-    opacity: 0.5;
+    animation: avvio-pulsa 1.6s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes avvio-pulsa {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.9;
   }
 }
